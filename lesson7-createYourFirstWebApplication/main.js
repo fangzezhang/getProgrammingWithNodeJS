@@ -5,3 +5,25 @@ const router = require('./router');
 const contentTypes = require('./contentTypes');
 const utils = require('./utils');
 
+router.get('/', (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.html);
+  utils.getFile('views/index.html', res);
+});
+
+router.get('/contact', (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.html);
+  utils.getFile('views/contact.html', res);
+});
+
+router.get('/favicon.ico', (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.html);
+  utils.getFile('views/index.html', res);
+});
+
+router.post('/', (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.html);
+  utils.getFile('views/thanks.html', res);
+});
+
+http.createServer(router.handle).listen(port);
+console.info(`server is listening on port: ${port}`);

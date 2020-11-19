@@ -4,7 +4,8 @@
   "description": "read book: Get Programming With Node.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lesson7": "node lesson7-createYourFirstWebApplication/main.js"
   },
   "author": "fangzezhang",
   "license": "ISC",
