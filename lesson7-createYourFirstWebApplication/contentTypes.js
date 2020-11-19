@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = {  // set the content type in header
   html: {
     "Content-type": "text/html"
   },

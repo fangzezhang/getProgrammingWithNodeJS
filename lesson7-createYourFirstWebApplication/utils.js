@@ -3,8 +3,7 @@ const httpStatus = require('http-status-codes');
 const contentTypes = require('./contentTypes');
 
 module.exports = {
-  getFile: (file, res) => {
-    console.info(file);
+  getFile: (file, res) => {  // find the file(html...)
     fs.readFile(`${__dirname}/${file}`, (error, data) => {
       if (error) {
         res.writeHead(httpStatus.INTERNAL_SERVER_ERROR, contentTypes.html);

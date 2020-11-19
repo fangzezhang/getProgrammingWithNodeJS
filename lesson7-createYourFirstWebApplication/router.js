@@ -2,7 +2,7 @@ const httpStatus = require('http-status-codes');
 const contentTypes = require('./contentTypes');
 const utils = require('./utils');
 
-const routes = {
+const routes = {  // store url and action
   'GET': {},
   'POST': {}
 };

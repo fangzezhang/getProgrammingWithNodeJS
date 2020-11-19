@@ -5,7 +5,7 @@ const router = require('./router');
 const contentTypes = require('./contentTypes');
 const utils = require('./utils');
 
-router.get('/', (req, res) => {
+router.get('/', (req, res) => {  // register url
   res.writeHead(httpStatus.OK, contentTypes.html);
   utils.getFile('views/index.html', res);
 });
