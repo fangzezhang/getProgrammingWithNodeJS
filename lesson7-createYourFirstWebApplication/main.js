@@ -1,4 +1,4 @@
-const port = 3000;
+const port = 3001;
 const http = require('http');
 const httpStatus = require('http-status-codes');
 const router = require('./router');
@@ -25,5 +25,11 @@ router.post('/', (req, res) => {
   utils.getFile('views/thanks.html', res);
 });
 
+/*http.createServer(((req, res) => {
+  res.writeHead(301, {
+    location: 'https://www.baidu.com'
+  });
+  res.end();
+})).listen(port);*/
 http.createServer(router.handle).listen(port);
 console.info(`server is listening on port: ${port}`);
