@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 const db = mongoose.connection;
 const subscriberSchema = new Schema({
   name: String,
-  email: String,
+  email: { type: String, required: true},
   zipCode: Number,
 });
 const Subscriber = mongoose.model('Subscriber', subscriberSchema);
